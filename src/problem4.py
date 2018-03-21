@@ -141,7 +141,7 @@ def problem4(m):
 
     count = 0
     for k in range(m):
-        if (k+2/k) % m == 0:
+        if (m/(k+3)) % 1 == 0:
             count = count +1
     return count
 
