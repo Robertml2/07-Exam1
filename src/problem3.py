@@ -96,14 +96,15 @@ def problem3(rect, n, window):
     # DONE: 2. Implement and test this function, TESTING each step as you go.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    import math
     rect.attach_to(window)
     radius = .5*rect.get_height()
     center = rect.get_lower_right_corner()
     circle = rg.Circle(center, radius)
     circle.attach_to(window)
     for k in range(n):
-        x = rect.get_lower_right_corner().x + 1.42*radius*k
-        y = rect.get_lower_right_corner().y + 1.42*radius*k
+        x = rect.get_lower_right_corner().x + k*math.sqrt(radius**2+radius**2)
+        y = rect.get_lower_right_corner().y + k*math.sqrt(radius**2+radius**2)
         center2 = rg.Point(x, y)
         circle = rg.Circle(center2, radius)
         circle.attach_to(window)
