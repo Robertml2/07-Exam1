@@ -209,6 +209,8 @@ def problem1a(a, b, threshold):
     for k in range((b+1) - a):
         if product_of_digits(k+a) < threshold:
             total = total + product_of_digits(k+a)
+        else:
+            total = total + 0
     return total
 
 
@@ -276,6 +278,8 @@ def problem1b(r):
     for k in range(((r**2)+1)-r):
         if product_of_digits(k+r) <= r:
             total = product_of_digits(k+r)
+        else:
+            total = total + 0
     return total
 
 
