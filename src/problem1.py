@@ -2,8 +2,8 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Madison Robertson.  March 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -205,6 +205,12 @@ def problem1a(a, b, threshold):
     #     1-argument version of the RANGE statement to solve this problem.
     # -------------------------------------------------------------------------
 
+    total = 0
+    for k in range((b+1) - a):
+        if product_of_digits(k+a) < threshold:
+            total = total + product_of_digits(k+a)
+    return total
+
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
@@ -217,6 +223,30 @@ def run_test_problem1b():
     print('--------------------------------------------------')
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
+
+    expected =
+    answer = problem1b(3)
+    print('Test 1 is: problem1b()')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected =
+    answer = problem1b(4)
+    print('Test 2 is: problem1b()')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected =
+    answer = problem1b(5)
+    print('Test 3 is: problem1b()')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected =
+    answer = problem1b(6)
+    print('Test 4 is: problem1b()')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
 
 
 ###############################################################################
@@ -242,6 +272,10 @@ def problem1b(r):
     # TODO: 5. Implement and test this function.
     #          See the IMPORTANT NOTE just before the DEF above.
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range((r**2)-r):
+        if product_of_digits(k+r) <= r:
+            total = total
 
 
 # -----------------------------------------------------------------------------
