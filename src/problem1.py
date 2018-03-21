@@ -224,26 +224,26 @@ def run_test_problem1b():
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
 
-    expected =
+    expected = 3
     answer = problem1b(3)
     print('Test 1 is: problem1b()')
     print('  Expected:', expected)
     print('  Actual:  ', answer)
 
-    expected =
+    expected = 64
     answer = problem1b(4)
     print('Test 2 is: problem1b()')
     print('  Expected:', expected)
     print('  Actual:  ', answer)
 
-    expected =
+    expected = 143
     answer = problem1b(5)
     print('Test 3 is: problem1b()')
     print('  Expected:', expected)
     print('  Actual:  ', answer)
 
-    expected =
-    answer = problem1b(6)
+    expected = 682
+    answer = problem1b(8)
     print('Test 4 is: problem1b()')
     print('  Expected:', expected)
     print('  Actual:  ', answer)
@@ -273,9 +273,10 @@ def problem1b(r):
     #          See the IMPORTANT NOTE just before the DEF above.
     # -------------------------------------------------------------------------
     total = 0
-    for k in range((r**2)-r):
+    for k in range(((r**2)+1)-r):
         if product_of_digits(k+r) <= r:
-            total = total
+            total = product_of_digits(k+r)
+    return total
 
 
 # -----------------------------------------------------------------------------
